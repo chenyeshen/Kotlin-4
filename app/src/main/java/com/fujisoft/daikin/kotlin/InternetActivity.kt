@@ -28,7 +28,7 @@ class InternetActivity : AppCompatActivity() {
         async {
             var htmlText = Request(URLStr).run()
             uiThread {
-                toast("Request performed")
+                toast("请求执行")
                 val json = JSON.parseObject(htmlText)
                 resultTv.text = json.get("result").toString()+"\n"+json.get("msg")
 //                resultTv.text = htmlText
